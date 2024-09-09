@@ -44,17 +44,17 @@ class DistriUNetPP(BaseModel):  # for Patch Parallelism
     def forward(
         self,
         sample: torch.FloatTensor,
-        timestep: torch.Tensor or float or int,
+        timestep: torch.Tensor or float or int, # type: ignore
         encoder_hidden_states: torch.Tensor,
-        class_labels: torch.Tensor or None = None,
-        timestep_cond: torch.Tensor or None = None,
-        attention_mask: torch.Tensor or None = None,
-        cross_attention_kwargs: dict[str, any] or None = None,
-        added_cond_kwargs: dict[str, torch.Tensor] or None = None,
-        down_block_additional_residuals: tuple[torch.Tensor] or None = None,
-        mid_block_additional_residual: torch.Tensor or None = None,
-        down_intrablock_additional_residuals: tuple[torch.Tensor] or None = None,
-        encoder_attention_mask: torch.Tensor or None = None,
+        class_labels: torch.Tensor or None = None, # type: ignore
+        timestep_cond: torch.Tensor or None = None, # type: ignore # type: ignore
+        attention_mask: torch.Tensor or None = None, # type: ignore # type: ignore
+        cross_attention_kwargs: dict[str, any] or None = None, # type: ignore
+        added_cond_kwargs: dict[str, torch.Tensor] or None = None, # type: ignore # type: ignore
+        down_block_additional_residuals: tuple[torch.Tensor] or None = None, # type: ignore
+        mid_block_additional_residual: torch.Tensor or None = None, # type: ignore
+        down_intrablock_additional_residuals: tuple[torch.Tensor] or None = None, # type: ignore
+        encoder_attention_mask: torch.Tensor or None = None, # type: ignore
         return_dict: bool = True,
         record: bool = False,
     ):
